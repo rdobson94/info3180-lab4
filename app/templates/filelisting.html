@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+
+{% block js %}
+{% endblock %}
+
+
+{% block main %}
+<div class="container">
+{% for file in file_list %}
+<ul>
+    <li> {{file}} uploaded! </li>
+     <img src='app/static/uploads/{{file}}'/>  
+     
+</ul> 
+{% endfor %}
+
+</div>
+
+{% endblock %}
