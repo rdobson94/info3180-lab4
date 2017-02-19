@@ -9,9 +9,14 @@
 <div class="container">
 {% for file in file_list %}
 <ul>
-    <li> {{file}} uploaded! </li>
-     <img src='app/static/uploads/{{file}}'/>  
-     
+   {% if file[-4:] != '.jpg' %}
+      <li> {{file}} </li>
+    
+   {% else %}
+     <li> {{file}}  JPG File Uploaded! </li>
+     <li> <img src='static/uploads/{{file}}' width="250" height="250"/> </li>
+    {% endif %}
+
 </ul> 
 {% endfor %}
 
